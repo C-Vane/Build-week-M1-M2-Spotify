@@ -26,6 +26,6 @@ const validateEmail = () => {
     email.value = "";
     password.value = "";
   } else {
-    window.location.href = "~/home.html";
+    window.location.href = "Home/home.html";
   }
 };
