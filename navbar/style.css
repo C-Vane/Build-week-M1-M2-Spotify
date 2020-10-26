@@ -37,3 +37,8 @@ i:hover {
   bottom: 25px;
   left: 8px;
 }
+#smallItems2 {
+  position: absolute !important;
+  bottom: 25px;
+  left: 4px;
+}
