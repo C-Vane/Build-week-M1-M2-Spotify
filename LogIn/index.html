@@ -6,15 +6,99 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <!--FontAwesome-->
+        <script src="https://kit.fontawesome.com/c8c5d377fb.js" crossorigin="anonymous"></script>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--login CSS-->
+        <link rel="stylesheet" href="/LogIn/style/style.css">
+
+
     </head>
 
     <body>
 
-        <!-- Optional JavaScript -->
+        <div class="container">
+            <header class="head text-center pt-3 pb-1">
+                <a class="logo" title="Spotify" href="">
+                    <img src="/LogIn/Image/Spotify_Logo_RGB_Black.png" alt="spotifylogo">
+                </a>
+            </header>
+
+        </div>
+        <div class="divider"></div>
+
+        <div class="container">
+            <div class="text-center mt-4">
+                <strong>To continue, log in to Spotify.</strong>
+            </div>
+            <div id="login">
+                <div class="content">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <button type="button" class="btn btn-primary"> <i class="fab fa-facebook"></i>
+                                CONTINUE
+                                WITH FACEBOOK </button>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-dark"><i class="fab fa-apple    "></i> CONTINUE WITH
+                                APPLE</button>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-outline-secondary"><i class="fab fa-google"></i>
+                                CONTINUE
+                                WITH GOOGLE
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email address or username</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Email address or username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control mb-3" placeholder="Password" id="password"
+                                    required>
+                                <p><a class=" text-muted password-reset" href="#">Forgot your password?</a>
+                                </p>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="form-group form-check col-12 col-6 ml-2">
+                                    <label class="form-check-label checkbox font-weight-light" for="remember">
+                                        <input type="checkbox" id="remember" value="remenberuser" checked>
+                                        <span class="checkmark"></span>
+                                        Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-success col-12 col-6" id="login"
+                                    onclick="validateEmail()">LOG
+                                    IN</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="col-xs-12">
+                                <div class="row mt-4 mb-3">
+                                    <p class="m-auto"><strong>Don't have an account?</strong></p>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-outline-secondary"> SIGN UP FOR SPOTIFY
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -25,6 +109,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <script src="/LogIn/script/script.js"></script>
     </body>
 
 </html>
