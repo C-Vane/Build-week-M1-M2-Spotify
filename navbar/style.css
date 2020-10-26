@@ -6,6 +6,10 @@ body {
   color: gray !important;
 }
 
+.nav-link:focus {
+  border-left: 3px solid #1cb855;
+}
+
 a:hover,
 i:hover {
   color: white !important;
