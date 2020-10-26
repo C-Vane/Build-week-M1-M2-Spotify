@@ -17,28 +17,32 @@ i:hover {
 
 #buttonSignUp {
   position: absolute;
-  bottom: 140px;
+  bottom: 175px;
   left: 4px;
 }
 
 #buttonLogIn {
   position: absolute;
-  bottom: 80px;
+  bottom: 115px;
   left: 4px;
 }
 #smallItems {
   position: absolute !important;
-  bottom: 50px;
+  bottom: 85px;
   left: 4px;
 }
 
 #smallItems1 {
   position: absolute !important;
-  bottom: 25px;
+  bottom: 60px;
   left: 8px;
 }
 #smallItems2 {
   position: absolute !important;
-  bottom: 25px;
+  bottom: 60px;
   left: 4px;
+}
+
+footer {
+  background-color: #2c2c2c !important;
 }
