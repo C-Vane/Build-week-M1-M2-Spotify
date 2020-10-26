@@ -1,7 +1,8 @@
 body {
   background-color: black;
 }
-.nav-link {
+.nav-link,
+text {
   color: gray !important;
 }
 
@@ -20,4 +21,15 @@ i:hover {
   position: absolute;
   bottom: 80px;
   left: 4px;
+}
+#smallItems {
+  position: absolute !important;
+  bottom: 50px;
+  left: 4px;
+}
+
+#smallItems1 {
+  position: absolute !important;
+  bottom: 25px;
+  left: 8px;
 }
