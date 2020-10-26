@@ -9,3 +9,15 @@ a:hover,
 i:hover {
   color: white !important;
 }
+
+#buttonSignUp {
+  position: absolute;
+  bottom: 140px;
+  left: 4px;
+}
+
+#buttonLogIn {
+  position: absolute;
+  bottom: 80px;
+  left: 4px;
+}
