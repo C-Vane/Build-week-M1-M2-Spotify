@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 60%;
+}
+
+body {
+  color: var(--color-white);
+  height: 100%;
+  background-color: #060b11;
+  font-family: 'Bree Serif', spotify-circular, Helvetica, Arial, sans-serif;
+}
+:root {
+  --color-dark: #060b11;
+  --color-green: #1ed760;
+  --color-dark-blue: #0a1520;
+  --color-blue: #25466e;
+  --color-white: #fff;
+}
+
+main {
+  height: 90vh;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-blue),
+    var(--color-dark-blue)
+  );
+}
+
+.col {
+  padding: 0.6rem;
+}
+
+header {
+  margin: 2rem 35rem 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header li {
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 0.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+
+header a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.header a:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: 35%;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-green);
+  opacity: 0;
+}
+
+.header a:hover,
+.headera:active {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.header a:hover:after {
+  opacity: 1;
+  text-decoration: none;
+}
+
+main section {
+  width: 85%;
+  height: 30%;
+  margin: 5rem auto;
+}
+
+.composition {
+  height: 90%;
+  text-align: center;
+}
+
+.image {
+  height: 90%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.6rem;
+}
+
+.composition img {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  object-fit: cover;
+  height: 10vh;
+}
+
+/* ====== navigation */
+
+.nav-link,
+.text {
+  color: gray !important;
+}
+
+.nav-link:focus {
+  border-left: 3px solid #1cb855;
+}
+
+a:hover,
+i:hover {
+  color: white !important;
+}
+
+#buttonSignUp {
+  position: absolute;
+  bottom: 175px;
+  left: 4px;
+}
+
+#buttonLogIn {
+  position: absolute;
+  bottom: 115px;
+  left: 4px;
+}
+#smallItems {
+  position: absolute !important;
+  bottom: 85px;
+  left: 4px;
+}
+
+#smallItems1 {
+  position: absolute !important;
+  bottom: 60px;
+  left: 8px;
+}
+#smallItems2 {
+  position: absolute !important;
+  bottom: 60px;
+  left: 4px;
+}
