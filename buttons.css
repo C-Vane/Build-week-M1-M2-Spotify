@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+.btn {
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 500px;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  border: none;
+  margin: 5px;
+  padding: 14px 14px;
+}
+.btn.btn-primary {
+  background-color: #3b5998;
+  width: 100%;
+}
+.btn.btn-primary:hover {
+  background-color: #4a6aaf;
+}
+.btn.btn-dark {
+  background-color: #000;
+  width: 100%;
+}
+.btn.btn-dark:hover {
+  background-color: #3f3f3f;
+}
+.btn.btn-outline-secondary {
+  color: #616467;
+  box-shadow: inset 0 0 0 2px #616467;
+  background-color: transparent;
+  width: 100%;
+}
+.btn.btn-outline-secondary:hover {
+  background-color: #616467;
+  color: #fff;
+}
+.btn.btn-success {
+  background-color: #15883e;
+}
+.btn.btn-success:hover {
+  background-color: #1db954;
+}
+.library {
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+.library::after {
+  content: "\\";
+  font-size: 20px;
+  margin: 0px;
+}
