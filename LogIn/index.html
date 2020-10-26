@@ -6,6 +6,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--SPECIFY CLIENT ID-->
+        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/api:client.js"></script>
         <!--FontAwesome-->
         <script src="https://kit.fontawesome.com/c8c5d377fb.js" crossorigin="anonymous"></script>
         <!-- Bootstrap CSS -->
@@ -46,7 +49,8 @@
                                 APPLE</button>
                         </div>
                         <div class="row">
-                            <button type="button" class="btn btn-outline-secondary"><i class="fab fa-google"></i>
+                            <button type="button" class="btn btn-outline-secondary" id="googlelogin"
+                                data-onsuccess="onSignIn" data-onload="true"><i class="fab fa-google"></i>
                                 CONTINUE
                                 WITH GOOGLE
                             </button>
@@ -57,11 +61,11 @@
                         <span>OR</span>
                     </div>
                     <div>
-                        <form>
+                        <form id="form">
                             <div class="form-group">
                                 <label for="email">Email address or username</label>
-                                <input type="email" class="form-control" id="email"
-                                    placeholder="Email address or username">
+                                <input type="email" class="form-control" onchange="validateEmail()" id="email"
+                                    placeholder="Email address or username" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
@@ -78,7 +82,7 @@
                                         Remember me</label>
                                 </div>
                                 <button type="submit" class="btn btn-success col-12 col-6" id="login"
-                                    onclick="validateEmail()">LOG
+                                    onmouseup="logIn()">LOG
                                     IN</button>
                             </div>
                             <div class="divider"></div>
@@ -87,7 +91,8 @@
                                     <p class="m-auto"><strong>Don't have an account?</strong></p>
                                 </div>
                                 <div class="row">
-                                    <button type="button" class="btn btn-outline-secondary"> SIGN UP FOR SPOTIFY
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        onclick="window.location.href='/SignUp/signup.html'"> SIGN UP FOR SPOTIFY
                                     </button>
                                 </div>
                             </div>
@@ -109,6 +114,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <!--GOOGLE SIGN IN-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="/LogIn/script/script.js"></script>
     </body>
 
