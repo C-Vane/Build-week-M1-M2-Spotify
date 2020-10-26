@@ -26,6 +26,15 @@ i:hover {
   bottom: 115px;
   left: 4px;
 }
+#buttonSignUp button,
+#buttonLogIn button {
+  padding: 10px 60px;
+  width: 200px;
+}
+
+#buttonLogIn button {
+  border: 2px solid #fff;
+}
 #smallItems {
   position: absolute !important;
   bottom: 85px;
