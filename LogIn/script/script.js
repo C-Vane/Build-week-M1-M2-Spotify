@@ -23,9 +23,23 @@ const validateEmail = () => {
   if (!IsThisAnEmail(email.value)) {
     email.classList.add("haserrorborder");
     emaildiv.classList.add("haserror");
-    email.value = "";
-    password.value = "";
   } else {
-    window.location.href = "Home/home.html";
+    window.open("../Home/Home.html");
+  }
+  email.value = "";
+  password.value = "";
+};
+
+const matchEmail = () => {
+  const email = document.getElementById("email");
+  const email_confirm = document.getElementById("email2");
+  console.log(email_confirm.value);
+
+  if (email.value !== email_confirm.value) {
+    email_confirm.classList.add("haserrorborder");
+    email_confirm.parentElement.classList.add("notthesame");
+  } else {
+    email_confirm.classList.remove("haserrorborder");
+    email_confirm.parentElement.classList.remove("notthesame");
   }
 };

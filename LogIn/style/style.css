@@ -30,3 +30,13 @@ body {
 .text-muted.password-reset:hover {
   color: #15883e !important;
 }
+/*****FOR FORM ERROR******/
+.haserrorborder {
+  border-color: red;
+}
+.haserror ::after {
+  content: "Please enter correct usarname and password";
+  color: red;
+  display: block;
+  z-index: 20;
+}

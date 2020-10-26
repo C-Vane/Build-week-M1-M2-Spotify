@@ -122,16 +122,7 @@
   border-width: 0 2px 2px 0;
   transform: rotate(32deg);
 }
-/*****FOR FORM ERROR******/
-.haserrorborder {
-  border-color: red;
-}
-.haserror ::after {
-  content: "Please enter correct usarname and password";
-  color: red;
-  display: block;
-  z-index: 20;
-}
+
 /*****************Page Divider********************/
 .divider {
   border-top: 1px solid #b0b3b8;

@@ -60,3 +60,19 @@ a:hover {
 input[type="radio"]:checked {
   background-color: #2cec6f;
 }
+/*****FOR FORM ERROR******/
+.haserrorborder {
+  border-color: red;
+}
+.haserror ::after {
+  content: "Please enter a valid email";
+  color: red;
+  display: block;
+  z-index: 20;
+}
+.notthesame ::after {
+  content: "The E-mail Addresses do not match";
+  color: red;
+  display: block;
+  z-index: 20;
+}

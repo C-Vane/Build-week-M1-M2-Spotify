@@ -51,12 +51,14 @@
                 <div class="form-group">
                     <label for="email">What is your email address?
                     </label>
-                    <input type="email" class="form-control" id="email" placeholder="Email your email address.">
+                    <input type="email" class="form-control" id="email" placeholder="Email your email address."
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="email2">Confirm email address
                     </label>
-                    <input type="email" class="form-control" id="email2" placeholder="Re-enter your email address">
+                    <input type="email" class="form-control" id="email2" onchange="matchEmail()"
+                        placeholder="Re-enter your email address" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Create a password </label>
@@ -65,7 +67,8 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="nicname">What shall we call you </label>
-                    <input type="text" class="form-control mb-2" id="nicname" placeholder="Enter a profile name.">
+                    <input type="text" class="form-control mb-2" id="nicname" placeholder="Enter a profile name."
+                        required>
                     <small>This will be shown on your profile.</small>
                 </div>
                 <label for="bdate">What's your date of birth?</label>
@@ -73,11 +76,11 @@
 
                     <div class="col-2 col-md-3">
                         <label for="day">Day</label>
-                        <input type="number" id="day" class="form-control" placeholder="TT">
+                        <input type="number" id="day" class="form-control" placeholder="TT" required>
                     </div>
                     <div class="col-5">
                         <label for="day">Month</label>
-                        <select id="inputState" class="form-control">
+                        <select id="inputState" class="form-control" required>
                             <option class="text-muted">Month</option>
                             <option>January</option>
                             <option>February</option>
@@ -94,8 +97,8 @@
                         </select>
                     </div>
                     <div class="col-3 col-4">
-                        <label for="day">year</label>
-                        <input type="number" id="day" class="form-control" placeholder="YYYY">
+                        <label for="year">year</label>
+                        <input type="number" id="year" class="form-control" placeholder="YYYY" required>
                     </div>
                 </div>
                 <label for="gender">What's your gender?</label>
@@ -126,14 +129,14 @@
                     <span class="checkmark"></span>
                     Please send me marketing messages from Spotify.</label>
                 <label class="form-check-label checkbox font-weight-light mt-5 mb-5" for="registration">
-                    <input type="checkbox" id="registration" value="remenberuser">
+                    <input type="checkbox" id="registration" value="remenberuser" required>
                     <span class="checkmark"></span>
                     <p>Share my registration data with the Spotify Content Providers for marketing purposes. I am aware
                         that my data, as described in our privacy policy, may be forwarded to a country outside the
                         European Economic Area</p>
                 </label>
                 <label class="form-check-label checkbox font-weight-light mt-5 mb-5" for="terms">
-                    <input type="checkbox" id="terms" value="remenberuser">
+                    <input type="checkbox" id="terms" value="remenberuser" required>
                     <span class="checkmark"></span>
                     I hereby agree to the Spotify <a href="" class="green"> Terms </a>of <a class="black"
                         href="">Use</a> .
@@ -141,7 +144,9 @@
                         protects personal
                         data, please read <a href="" class="green">privacy policy</a>.</p></label>
 
-                <button type="submit" class="btn btn-success col-12 col-6 mb-4" id="login" onclick="">To register
+                <button type="submit" class="btn btn-success col-12 col-6 mb-4" id="login"
+                    onclick="validateEmail(),matchEmail()">To
+                    register
                 </button>
                 <p class="text-center">You already have an account? <a href="" class="green">Sign in</a> .</p>
             </form>
