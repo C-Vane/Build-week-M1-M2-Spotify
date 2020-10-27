@@ -22,7 +22,7 @@ i:hover {
 }
 
 #buttonLogIn {
-  position: absolute;
+  position: absolute !important;
   bottom: 115px;
   left: 4px;
 }

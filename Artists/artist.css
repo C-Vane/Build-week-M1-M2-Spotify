@@ -1,0 +1,173 @@
+body {
+  font-family: "Circular Book";
+  font-size: 14px;
+  background-color: #181818;
+}
+:root {
+  --color-dark: #060b11;
+  --color-green: #1ed760;
+  --color-dark-blue: #0a1520;
+  --color-blue: #25466e;
+  --color-white: #fff;
+}
+h1 {
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0px 0px 2px #ffffff;
+}
+.container {
+  padding: 0;
+}
+header > div.row {
+  background-image: url("/Artists/img/rs-212580-GettyImages-84889478.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -60px;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+  text-transform: uppercase;
+  height: 450px;
+  z-index: -2;
+}
+header > div.row::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, #181818 10%, #181818, #181818b6, #00000000);
+  z-index: 0;
+}
+
+header li {
+  text-transform: uppercase;
+  list-style: none;
+  font-family: inherit;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header a {
+  color: rgba(255, 255, 255, 0.473);
+}
+
+.header a:hover,
+.header a:active,
+.header a:focus {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.header a::after {
+  content: "";
+  width: 2rem;
+  display: block;
+  margin-left: 40%;
+  border-bottom: 2px solid #1ed760;
+  padding: 4px;
+  opacity: 0;
+}
+.header a:focus:after {
+  opacity: 1;
+}
+header .container div {
+  z-index: 2 !important;
+}
+.btn {
+  z-index: 2 !important;
+}
+nav#navbar {
+  position: sticky;
+  bottom: 0;
+}
+header div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.more {
+  padding: 0px 9px 9px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  color: var(--color-white);
+  border: 1px solid #fff !important ;
+  font-size: 20px !important;
+  text-align: center;
+  letter-spacing: -1px !important;
+  display: flex;
+  justify-content: top;
+  background-color: #00000030;
+}
+.btn {
+  max-height: 45px !important;
+}
+
+.btn-outline-light {
+  color: #1ed760;
+  background-color: #00000030;
+  border: 1px solid #ffffff !important;
+}
+
+main label {
+  font-size: 12px;
+  font-weight: 400;
+}
+#tapestry img {
+  transition: transform 1.2s ease-in-out;
+  transition: box-shadow 0.3s infinite ease-in;
+  padding: 0;
+  margin: 0 10px;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.albumcover:hover {
+  filter: brightness(0.5);
+}
+.albumcover::after {
+  content: "hello";
+}
+.playbtns .btn {
+  color: #fff !important;
+  min-width: 10px !important;
+  padding: 0;
+  position: relative;
+  bottom: 210px;
+  left: 10px;
+  opacity: 0;
+}
+.playbtns button.more {
+  min-height: 50px !important;
+  min-width: 50px !important;
+  padding: 0px !important;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000030 !important;
+}
+
+.albumcover:hover .btn {
+  opacity: 1;
+}
+.albumcover {
+  height: auto;
+  width: 100%;
+}
+
+#relatedartist .albumcover {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
