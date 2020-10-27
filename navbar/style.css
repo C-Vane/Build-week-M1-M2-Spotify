@@ -10,6 +10,18 @@ body {
   border-left: 3px solid #1cb855;
 }
 
+#navbarColumn {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vw;
+}
+
+#firstContainer {
+  background-image: linear-gradient(to bottom right, #1c1c1c, black);
+  padding-top: 20px;
+}
+
 a:hover,
 i:hover {
   color: white !important;
@@ -36,20 +48,20 @@ i:hover {
   border: 2px solid #fff;
 }
 #smallItems {
-  position: absolute !important;
+  position: fixed !important;
   bottom: 85px;
-  left: 4px;
+  left: 10px;
 }
 
 #smallItems1 {
   position: absolute !important;
-  bottom: 60px;
+  bottom: 80px;
   left: 8px;
 }
 #smallItems2 {
-  position: absolute !important;
+  position: fixed !important;
   bottom: 60px;
-  left: 4px;
+  left: 10px;
 }
 
 footer {
