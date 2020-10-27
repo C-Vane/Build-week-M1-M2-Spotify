@@ -12,7 +12,7 @@ body {
   color: var(--color-white);
   height: 100%;
   background-color: #060b11;
-  font-family: 'Bree Serif', spotify-circular, Helvetica, Arial, sans-serif;
+  font-family: "Bree Serif", spotify-circular, Helvetica, Arial, sans-serif;
 }
 :root {
   --color-dark: #060b11;
@@ -24,11 +24,7 @@ body {
 
 main {
   height: 90vh;
-  background-image: linear-gradient(
-    to right bottom,
-    var(--color-blue),
-    var(--color-dark-blue)
-  );
+  background-image: linear-gradient(to right bottom, var(--color-blue), var(--color-dark-blue));
 }
 
 .col {
@@ -47,10 +43,10 @@ header ul {
 header li {
   text-transform: uppercase;
   list-style: none;
-  font-size: 0.6rem;
+  font-size: 10px;
   font-family: inherit;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
   position: relative;
 }
 
@@ -59,7 +55,7 @@ header a {
 }
 
 .header a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   right: 35%;

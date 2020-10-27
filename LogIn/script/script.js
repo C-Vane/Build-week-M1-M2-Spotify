@@ -51,11 +51,9 @@ const logIn = () => {
   if (i === 0) {
     window.open("../Home/Home.html");
   } else return;
-};
+}; ///
 
-/***GOOGLE LOG IN
-
-let googleUser = {};
+/****GOOGLE LOG IN*/ let googleUser = {};
 let startApp = function () {
   gapi.load("auth2", function () {
     // Retrieve the singleton for the GoogleAuth library and set up the client.
@@ -91,4 +89,3 @@ function onSignIn(googleUser) {
   console.log("Image URL: " + profile.getImageUrl());
   console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
-*/
