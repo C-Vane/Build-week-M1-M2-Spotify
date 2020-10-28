@@ -17,7 +17,7 @@
 
         <!--Link nav-->
         <link rel="stylesheet" href="/buttons.css">
-
+        <link rel="stylesheet" href="/navbar/style.css">
         <!---FONT CIRCULAR-->
         <link href="//db.onlinewebfonts.com/c/02d8f1743ede250c7c9865f1574d7cc6?family=Circular+Book" rel="stylesheet"
             type="text/css" />
@@ -26,294 +26,408 @@
 
 
     <body>
-
-        <header class="container">
+        <div class="container-fluid">
+            <!-----=================SIDE NAVBAR================----->
             <div class="row">
-                <div class="container col-8 text-white">
-                    <!---===============TOP HEADER==============------>
-                    <div>
-                        <small class="m-5">33,000,575 monthly listners</small>
-                        <h1 class="m-2">Queen</h1>
-                    </div>
-                    <div class=" row d-flex justify-content-center">
-                        <button class="btn btn-success">play</button>
-                        <button class="btn btn-outline-light"> follow</button>
-                        <div class="dropdown open">
-                            <button class="btn more" type="button" id="more" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                . . .</button>
-                            <div class="dropdown-menu" aria-labelledby="more">
-                                <button class="dropdown-item" href="#">Go to Artist Radio</button>
-                                <div class="dropdown-divider"></div>
-                                <button class="dropdown-item" href="#">Unfollow</button>
-                                <button class="dropdown-item" href="#">Report</button>
-                                <div class="dropdown-divider"></div>
-                                <button class="dropdown-item" type="button" id="share" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Share</button>
-                                <div class="dropdown-menu" aria-labelledby="share">
-                                    <button class="dropdown-item" href="#"><i class="fa fa-facebook-official"
-                                            aria-hidden="true"></i>Facebook</button>
-                                    <button class="dropdown-item" href="#"><i
-                                            class="fa fa-facebook-messenger"></i>Messenger</button>
-                                    <button class="dropdown-item" href="#"><i class="fa fa-twitter"
-                                            aria-hidden="true"></i>
-                                        Twitter</button>
-                                    <button class="dropdown-item" href="#"><i class="fa fa-telegram"
-                                            aria-hidden="true"></i>
-                                        Telegram</button>
-                                    <button class="dropdown-item" href="#"><i class="fa fa-skype"
-                                            aria-hidden="true"></i>
-                                        Skype</button>
-                                    <button class="dropdown-item" href="#"><i class="fa fa-tumblr"
-                                            aria-hidden="true"></i>
-                                        Tumbler</button>
-                                    <button class="dropdown-item" href="#"><i class="fa fa-link" aria-hidden="true"></i>
-                                        Copy Artist Link</button>
-                                    <button class="dropdown-item" href="#"> Copy Embeded Code </button>
-                                    <button class="dropdown-item" href="#"> Copy Spotify URL</button>
+                <div id="sidebar">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <img src="../logo/spotifylogo.png" style="height: 40px; width: auto" alt="" />
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-left form-inline mt-3 ml-4">
+                            <a class="nav-link" href="#"> <i class="fa fa-home mr-2"></i> Home</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-left form-inline ml-4">
+                            <a class="nav-link" href="#"><i class="fa fa-search mr-2"></i>Search</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-left form-inline ml-4">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-book mr-2"></i>Your Library</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-left form-inline" id="smallItems">
+                            <a class="nav-link" href="#"><i class="fa fa-arrow-circle-down mr-2"></i><small>Install
+                                    App</small></a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-left form-inline" id="smallItems2">
+                            <a class="nav-link" href="#"><i class="fa fa-user mr-2"></i><small>User Name</small></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---=================================TOP HEADER============================------>
+
+                <div class="col p-0" id="content">
+                    <header class="container text-white">
+                        <div class="row flex-column justify-content-between align-content-center text-center">
+
+                            <div>
+                                <small class="m-5">33,000,575 monthly listners</small>
+                                <h1 class="m-2">Queen</h1>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button class="btn btn-success">play</button>
+                                <button class="btn btn-outline-light"> follow</button>
+                                <div class="dropdown open">
+                                    <button class="btn more" type="button" id="more" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        . . .</button>
+                                    <div class="dropdown-menu one" aria-labelledby="more">
+                                        <button class="dropdown-item" href="#">Go to Artist Radio</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" href="#">Unfollow</button>
+                                        <button class="dropdown-item" href="#">Report</button>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown dropright">
+                                            <button class="dropdown-item " type="button" id="share"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">Share</button>
+                                            <div class="dropdown-menu" aria-labelledby="share">
+                                                <button class="dropdown-item" href="#"><i
+                                                        class="fa fa-facebook-official"
+                                                        aria-hidden="true"></i>Facebook</button>
+                                                <button class="dropdown-item" href="#"><i
+                                                        class="fa fa-facebook-messenger"></i>Messenger</button>
+                                                <button class="dropdown-item" href="#"><i class="fa fa-twitter"
+                                                        aria-hidden="true"></i>
+                                                    Twitter</button>
+                                                <button class="dropdown-item" href="#"><i class="fa fa-telegram"
+                                                        aria-hidden="true"></i>
+                                                    Telegram</button>
+                                                <button class="dropdown-item" href="#"><i class="fa fa-skype"
+                                                        aria-hidden="true"></i>
+                                                    Skype</button>
+                                                <button class="dropdown-item" href="#"><i class="fa fa-tumblr"
+                                                        aria-hidden="true"></i>
+                                                    Tumbler</button>
+                                                <button class="dropdown-item" href="#"><i class="fa fa-link"
+                                                        aria-hidden="true"></i>
+                                                    Copy Artist Link</button>
+                                                <button class="dropdown-item" href="#"> Copy Embeded Code </button>
+                                                <button class="dropdown-item" href="#"> Copy Spotify URL</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- =========== Header Navigation ========== -->
+                            <nav id="navbar mb-0">
+                                <ul class="header navbar row">
+                                    <li><a type="button" class="navlink" onclick="show('overview', 'blue')" href="#"
+                                            id="defaultopen" aria-current="current">overview</a></li>
+                                    <li><a type="button" class="navlink" onclick="show('relatedartist', 'green')"
+                                            href="#">
+                                            related
+                                            artists</a></li>
+                                    <li><a type="button" class="navlink" onclick="show('about', 'red')"
+                                            href="#">about</a></li>
+
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
+                    </header>
 
-                    <!-- =========== Header Navigation ========== -->
-                    <nav id="navbar">
-                        <ul class="header navbar row">
-                            <li><a type="button" data-toggle="collapse" data-target="#overview" aria-expanded="true"
-                                    aria-controls="collapseExample" class="col-4 active" href="#">overview<span
-                                        class="sr-only">(current)</span></a></li>
-                            <li><a type="button" data-toggle="collapse" data-target="#relatedartist"
-                                    aria-expanded="false" class="col-4" href="#">related artists</a></li>
-                            <li><a type="button" data-toggle="collapse" data-target="#about" aria-expanded="false"
-                                    aria-controls="collapseExample" class="col-4 active" href="#">about</a></li>
+                    <!---=========================     ALBUMS    ==========================-->>
+                    <main>
+                        <section id="overview" class="show col-10 pl-4 pr-2">
 
-                        </ul>
-                    </nav>
+                            <div class="container text-white ml-5" id="tapestry">
+                                <h2>Albums</h2>
+                                <div class="row text-center mt-4">
+                                    <div class="col-6 col-md-5 col-lg-3 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-around">
+                                            <button class="btn btn-success"><i class="fa fa-play"></i></button>
+                                        </div>
+                                        <label>Bohemian Rhapsody(The Original Soundtrack)</label>
+                                        <small class="text-muted">Qween</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--==============================RELATED ARTISTS==============================-->
+                        <section id="relatedartist" class=" show col-10 pl-4 pr-2">
+                            <div class="container text-white mt-3 ml-5" id="tapestry2">
+                                <h2>Related Artists</h2>
+                                <div class="row text-center mt-4">
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-5 col-lg-4 mb-1">
+                                        <img src="http://placehold.it/200x200" alt="album picture"
+                                            class="albumcover mb-1">
+                                        <div class="playbtns d-flex flex-row justify-content-between">
+                                            <button class="btn"><i class="fa fa-heart-o"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn more"><i class="fa fa-play"></i></button>
+                                            <button class="btn">...</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <!------==================================== ABOUT =================================================-->
+                        <section id="about" class="show col">
+                            <div class="container text-white">
+                                <div class="row">
+                                    <div class="col-12 col-md-8 " id="galary">
+                                        <h5>Image Galary</h5>
+                                        <div class="row">
+
+                                            <div class=" col-12 col-md-8">
+                                                <img src="http://placehold.it/400x400" class="albumcover m-0 p-0" alt=""
+                                                    srcset="">
+                                            </div>
+                                            <div class=" col-12 col-md-4">
+                                                <img src="http://placehold.it/200x200" class="albumcover mb-1 p-0"
+                                                    alt="" srcset="">
+                                                <img src="http://placehold.it/200x200" class="albumcover m-0 p-0" alt=""
+                                                    srcset="">
+
+                                            </div>
+                                        </div>
+                                        <div class="row m-4">
+                                            <div>
+                                                <h5>Bio</h5>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                                                    reprehenderit quia ducimus aperiam reiciendis in magnam dolore,
+                                                    tempora
+                                                    impedit, maiores perferendis et, tempore quaerat voluptates
+                                                    doloremque
+                                                    expedita libero magni excepturi!</p>
+                                                <button class="btn more"> READ MORE</button><br>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 col-12">
+                                                    <h2>000000000</h2>
+                                                    <small class="text-muted">Monthly Listners</small>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <h2>000000000</h2>
+                                                    <small class="text-muted">Followers</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 pl-5" id="moreinfo">
+                                        <h5>More Information</h5>
+                                        <ul>
+                                            <li><a href="#" class="text-white"><i class="fa fa-instagram pr-1"
+                                                        aria-hidden="true"></i>Instagram</a>
+                                            </li>
+                                            <li><a href="#" class="text-white"><i class="fa fa-twitter pr-1"
+                                                        aria-hidden="true"></i>Twitter</a></li>
+                                            <li><a href="#" class="text-white"><i class="fa fa-facebook pr-1"
+                                                        aria-hidden="true"></i>Facebook</a>
+                                            </li>
+                                        </ul>
+                                        <h5>Where people listen</h5>
+                                        <ol>
+                                            <li><a href="#" class="text-white"></a></li>
+                                            <small class="text-muted text-uppercase">0000000 listners</small>
+                                            <li><a href="#" class="text-white"></a></li>
+                                            <small class="text-muted text-uppercase">0000000 listners</small>
+                                            <li><a href="#" class="text-white"></a></li>
+                                            <small class="text-muted text-uppercase">0000000 listners</small>
+                                            <li><a href="#" class="text-white"></a></li>
+                                            <small class="text-muted text-uppercase">0000000 listners</small>
+                                            <li><a href="#" class="text-white"></a></li>
+                                            <small class="text-muted text-uppercase">0000000 listners</small>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+
+
+
+
                 </div>
-            </div>
-        </header>
-        <main>
-            <section id="overview" class="collapse show col-10 pl-4 pr-2">
-
-                <div class="container text-white mt-3 ml-5" id="tapestry">
-                    <h2>Albums</h2>
-                    <div class="row text-center mt-4">
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/Greatest Hits II.jfif" alt="album picture" class="albumcover mb-4">
-                            <label>Bohemian Rhapsody(The Original Soundtrack)</label>
-                            <small class="text-muted">Qween</small>
-
-                            <div class="playbtns d-flex flex-row justify-content-around">
-                                <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-                                <button class="btn more"><i class="fa fa-play"></i></button>
-                                <button class="btn">...</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="relatedartist" class="collapse col-10 pl-4 pr-2">
-                <div class="container text-white mt-3 ml-5" id="tapestry">
-                    <h2>Related Artists</h2>
-                    <div class="row text-center mt-4">
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-2 mb-3">
-                            <img src="/Artists/img/david-bowie-9222045-1-402.jpg" alt="album picture"
-                                class="albumcover mb-4">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="about"></section>
-        </main>
 
 
 
 
 
 
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous">
+                    </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                    crossorigin="anonymous"></script>
+                <script src="/Artists/script/artist.js"></script>
 
-
-
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="/Artists/script/artist.js"></script>
     </body>
 
 </html>
