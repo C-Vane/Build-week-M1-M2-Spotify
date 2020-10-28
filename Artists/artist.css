@@ -33,17 +33,22 @@ h1 {
     display: none;
   }
   .btn {
-    height: 15px !important;
-    font-size: 10px !important;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 700px) {
+  .btn,
+  .playbtns {
+    transform: scale(0.7);
   }
 }
 #content {
   background-color: #181818;
+  margin: 0;
+}
+.container {
+  margin: 0;
+  padding: 0;
 }
 header > div.row {
   background-image: url("/Artists/img/rs-212580-GettyImages-84889478.jpg");
@@ -175,7 +180,13 @@ header div.container {
   display: block;
 }
 /*======================= CONTENT =======================*/
+/*========================= MUSIC LIST =========================*/
 
+#popular .container .row {
+  margin-top: 20px;
+}
+
+/******************************************************/
 main label {
   font-size: 12px;
   font-weight: 400;
@@ -201,9 +212,13 @@ main label {
   min-width: 10px !important;
   padding: 0;
   position: relative;
-  bottom: 125px;
-  left: 85px;
   opacity: 0;
+}
+#relatedartist .playbtns {
+  width: 60%;
+  position: absolute;
+  bottom: 40%;
+  left: 19%;
 }
 .playbtns button.more,
 .playbtns button.btn-success {
@@ -229,7 +244,7 @@ main label {
 
 #relatedartist img:hover ~ .playbtns .btn {
   animation-name: btnopacity;
-  animation-duration: 1.2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 #overview div img:hover ~ .playbtns .btn-success {
@@ -240,11 +255,11 @@ main label {
 
 @keyframes btnopacity {
   from {
-    bottom: 100px;
+    bottom: -40px;
     opacity: 0;
   }
   to {
-    bottom: 125px;
+    bottom: 0;
     opacity: 1;
   }
 }
