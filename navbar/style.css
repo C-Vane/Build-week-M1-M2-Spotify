@@ -12,7 +12,7 @@ body {
 
 #navbarColumn {
   position: fixed;
-  left: 0;
+  left: 0px;
   top: 0;
   height: 100vw;
 }
@@ -20,6 +20,9 @@ body {
 #firstContainer {
   background-image: linear-gradient(to bottom right, #1c1c1c, black);
   padding-top: 20px;
+}
+#imageContainer {
+  max-height: 500px;
 }
 
 a:hover,
@@ -64,6 +67,30 @@ i:hover {
   left: 10px;
 }
 
+th,
+td {
+  color: white;
+  padding: 0 !important;
+  padding-top: 12px !important;
+}
+
+.borderless td,
+.borderless th {
+  border: none;
+}
+
+small {
+  color: gray;
+}
+i {
+  color: gray;
+}
+
+table tr:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  background-color: #333333;
+}
 footer {
   background-color: #2c2c2c !important;
 }
