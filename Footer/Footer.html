@@ -22,8 +22,9 @@
     />
     <link rel="stylesheet" href="../navbar/style.css" />
     <link rel="stylesheet" href="../buttons.css" />
+    <script src="soundmanager2.js"></script>
 
-    <title>Album</title>
+    <title>Footer</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -301,9 +302,89 @@
       </div>
     </div>
 
-    <footer class="page-footer font-small fixed-bottom">
-      <div class="w-full flex items-center justify-between px-3">
-        <div class="flex items-center"></div>
+    <!-- Footer -->
+
+    <footer class="page-footer font-small">
+      <div class="container-fluid">
+        <div class="player gradient">
+          <div class="row">
+            <div class="col d-flex justify-content-left form-inline">
+              <img
+                class="song-info-cover"
+                style="width: 70px; padding-bottom: 5px; padding-top: 5px"
+                src="../logo/queen.jpg"
+                alt=""
+              />
+              <div
+                class="song-info-text"
+                style="font-size: 10pt; color: white; margin-left: 7px"
+              >
+                <div class="song-info-title">Procession</div>
+                <div class="song-info-title"><small>Queen</small></div>
+              </div>
+            </div>
+
+            <div
+              class="col d-flex justify-content-center form-inline"
+              id="playerButtons"
+            >
+              <a class="button gradient" id="random" href="" title="">
+                <i class="fa fa-random"></i>
+              </a>
+              <a
+                class="button gradient"
+                id="backward"
+                href=""
+                title=""
+                style="margin-left: 30px"
+              >
+                <i class="fa fa-step-backward"></i>
+              </a>
+              <a
+                class="button gradient"
+                id="play"
+                href=""
+                title=""
+                style="margin-left: 30px"
+              >
+                <i class="fa fa-play-circle fa-2x"></i>
+              </a>
+              <a
+                class="button gradient"
+                id="forward"
+                href=""
+                title=""
+                style="margin-left: 30px"
+              >
+                <i class="fa fa-step-forward"></i>
+              </a>
+              <a
+                class="button gradient"
+                id="repeat"
+                href=""
+                title=""
+                style="margin-left: 30px"
+              >
+                <i class="fa fa-repeat"></i>
+              </a>
+
+              <div class="progress-container w-100">
+                <div class="progress-time" id="current-time"></div>
+                <input type="range" id="progress" class="progress-range" />
+                <div class="progress-time" id="duration"></div>
+              </div>
+            </div>
+
+            <div class="col d-flex justify-content-center form-inline">
+              <div class="float-right">
+                <i class="fa fa-tasks"></i>
+                <i class="fa fa-laptop"></i>
+                <i class="fa fa-volume-up"></i>
+                <input type="range" id="seek" value="0" max="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
