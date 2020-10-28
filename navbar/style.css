@@ -73,6 +73,7 @@ td {
   padding: 0 !important;
   padding-top: 12px !important;
   padding-left: 5px !important;
+  font-size: 10pt;
 }
 
 .borderless td,
@@ -127,7 +128,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   animation: 0.2s;
   border: 1px solid #1ed760;
-
   border-radius: 5px;
   height: 1px;
   background-color: transparent;
@@ -147,7 +147,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 input[type="range"]::-moz-range-track {
   width: 100%;
-
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #1ed760;
@@ -168,12 +167,10 @@ input[type="range"]::-ms-track {
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-
   color: transparent;
 }
 input[type="range"]::-ms-fill-lower {
   background: #2a6495;
-
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
