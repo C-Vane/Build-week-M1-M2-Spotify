@@ -13,3 +13,26 @@ function myFunction() {
   }
 }
  */
+
+const page = (section, color) => {
+  let i, tabcontent;
+  tabcontent = document.getElementsByClassName("page");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.getElementById(section).style.display = "block";
+  //elmnt.style.backgroundColor = color;
+};
+
+document.getElementById("defaultopen").click();
+let count = true;
+const changetext = (elem) => {
+  if (count) {
+    elem.innerText = "SHOW LESS";
+    count = false;
+  } else {
+    elem.innerText = "SEE MORE";
+    count = true;
+  }
+};
