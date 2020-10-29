@@ -49,7 +49,7 @@ const logIn = () => {
     }
   });
   if (i === 0) {
-    window.open("../Home/Home.html");
+    window.open("../Home/Home2.html");
   } else return;
 }; ///
 
