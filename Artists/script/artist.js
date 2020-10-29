@@ -1,4 +1,4 @@
-/* window.onscroll = function () {
+/*window.onscroll = function () {
   myFunction();
 };
 
@@ -12,8 +12,7 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
- */
-
+*/
 const page = (section, color) => {
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("page");
@@ -36,4 +35,12 @@ const changetext = (elem) => {
     elem.innerText = "SEE MORE";
     count = true;
   }
+};
+
+const playMusic = () => {
+  window.open("/Album/Album.html");
+};
+
+const toAlbum = () => {
+  window.open("/Album/Album.html");
 };

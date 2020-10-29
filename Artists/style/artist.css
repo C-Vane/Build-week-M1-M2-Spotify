@@ -131,9 +131,7 @@ header .container div {
 .btn {
   z-index: 2 !important;
 }
-nav#navbar {
-  position: sticky;
-  bottom: 0;
+nav {
 }
 header div.container {
   display: flex;
@@ -187,6 +185,10 @@ header div.container {
 
 #popular .container .row {
   margin-top: 20px;
+}
+#popular .container .row:hover:not(#collapsemusic) {
+  background-color: #333333;
+  cursor: pointer;
 }
 
 /******************************************************/
