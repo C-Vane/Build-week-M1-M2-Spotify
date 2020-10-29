@@ -21,7 +21,10 @@ body {
 #firstContainer {
   background-image: linear-gradient(to bottom right, #1c1c1c, black);
   padding-top: 20px;
+  width: 100vw;
+  margin-right: 0px !important;
 }
+
 #imageContainer {
   max-height: 500px;
 }
