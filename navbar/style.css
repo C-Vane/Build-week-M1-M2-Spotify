@@ -208,3 +208,20 @@ input[type="range"]::-ms-thumb {
 input[type="range"]:focus::-ms-fill-lower {
   background: #1ed760;
 }
+@media (max-width: 550px) {
+  #imageContainer {
+    padding-bottom: 50px;
+  }
+  footer .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  footer {
+    height: 150px;
+  }
+  footer .row img,
+  .v-controls-wrapper {
+    display: none;
+  }
+}
