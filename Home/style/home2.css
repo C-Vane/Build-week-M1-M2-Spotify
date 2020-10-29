@@ -38,7 +38,7 @@ h1 {
     transform: scale(0.5);
   }
   #content {
-    margin-left: 0px !important;
+    margin: 0px !important;
   }
 }
 @media (max-width: 700px) {
@@ -48,7 +48,6 @@ h1 {
   }
 }
 #content {
-  height: 100vh;
   padding-bottom: 50px;
   margin-left: 180px;
 }
@@ -190,10 +189,11 @@ div img:hover ~ .playbtns .btn-success,
 }
 
 /**================= FOOTER===================**/
-.page-footer {
+footer {
   position: fixed;
   height: 100px;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
