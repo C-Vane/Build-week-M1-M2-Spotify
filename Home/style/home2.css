@@ -48,10 +48,29 @@ h1 {
   }
 }
 #content {
-  background-image: linear-gradient(to right bottom, var(--color-blue), var(--color-dark-blue));
   height: 100vh;
   padding-bottom: 50px;
   margin-left: 180px;
+}
+.blue {
+  background-color: #95c0de;
+  background-image: linear-gradient(135deg, #95c0de 0%, #1c2b48 100%);
+}
+.red {
+  background-color: #efbdbe;
+  background-image: linear-gradient(135deg, #efbdbe 0%, #9c0a0c 100%);
+}
+.orange {
+  background-color: #e94f00;
+  background-image: linear-gradient(315deg, #e94f00 0%, #ffdd8c 100%);
+}
+.violet {
+  background-color: #a1abef;
+  background-image: linear-gradient(135deg, #a1abef 0%, #442e65 100%);
+}
+.green {
+  background-color: #ccefa1;
+  background-image: linear-gradient(135deg, #ccefa1 0%, #21481c 100%);
 }
 /***************nav bar top*****************/
 

@@ -1,0 +1,12 @@
+#content {
+  background-image: linear-gradient(to right bottom, rgb(66, 66, 66), rgb(34, 34, 34));
+  height: 100vh;
+  padding-bottom: 50px;
+  margin-left: 180px;
+}
+input[type="search"] {
+  border: none;
+  padding-left: 20px;
+  border-radius: 50px;
+  margin: 5px;
+}

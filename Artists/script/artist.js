@@ -19,10 +19,11 @@ const page = (section, color) => {
   tabcontent = document.getElementsByClassName("page");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    document.getElementById("content").classList.remove("orange", "red", "blue", "green", "violet");
   }
 
   document.getElementById(section).style.display = "block";
-  //elmnt.style.backgroundColor = color;
+  document.getElementById("content").classList.add(color);
 };
 
 document.getElementById("defaultopen").click();
