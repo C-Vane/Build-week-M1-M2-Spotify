@@ -5,20 +5,20 @@ const endPoint = `https://api.spotify.com/v1`;
 // If Token expired please get new one from https://developer.spotify.com/console/get-current-user-playlists/
 const headers = {
   Authorization:
-    'Bearer BQCKkuwO_v9f-URJtEf4MI_njFNZI2XkLWjeZ52m-TcEZAS2p3oniKUBECVHI6oY8GwW4zSTU4qmNkiZ79JInNKrIubztvvF7nlK_eYWnazsKVPgqTVanqJSPg4DRNBXuOuZ3q2L6pNUgwnNvHs9OruiKbZ5QDN1LW9CZhqzcjUh',
-  'Content-Type': 'application/x-www-form-urlencoded',
-  Accept: ' application / json',
+    "Bearer BQDNm-1vj2qM5ncogxw51UrHvesHaNRp-NrC4qMImGJNTqCIy5pS8xzwEOOktgp47dDPEzX2r-zyRD2uQ-VH5YtY0gUJj9op9LSiNaOxuUiheqtYP_Ct62B0raqDVfkfx0zmgz3bmOutPYFjuCy5iqlGvtsC9YEntpP_6VmmXDpp71Std92XJdpYFu_Xy5zBqtz-5EVE72QZzJx3tp29iwag_j8",
+  "Content-Type": "application/x-www-form-urlencoded",
+  Accept: " application / json",
 };
 
 const fetchMusic = (query, endp, cb) => {
   let url = `${endPoint}${endp}`;
   if (query !== null) {
-    const unifiedQuery = query.replace(' ', '%20');
+    const unifiedQuery = query.replace(" ", "%20");
     url = `${endPoint}/search?query=${query}&type=track&offset=0&limit=${endp}`;
   }
 
   fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers,
   })
     .then((res) => res.json())
@@ -26,7 +26,7 @@ const fetchMusic = (query, endp, cb) => {
       cb(data);
     })
 
-    .catch((err) => alert('Token expired, please refresh it manually! '));
+    .catch((err) => alert("Token expired, please refresh it manually! "));
 };
 
 export default fetchMusic;
