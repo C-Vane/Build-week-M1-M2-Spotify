@@ -13,7 +13,7 @@ const setAlbum = (endpoint) => {
       if (i === 1) max -= 1;
       let card = data.items.reduce((acc, el, index) => {
         return index > min && index < max
-          ? (acc += `<div class="col col-sm-12 col-md-4 col-lg-2 p-0">
+          ? (acc += `<div class="col-12 col-sm-6 col-md-4 col-lg-2 p-0">
         <div class="composition m-1">
           <div class="image">
             <img src="${el.images[0].url}" class="albumcover" alt="Error Occured">

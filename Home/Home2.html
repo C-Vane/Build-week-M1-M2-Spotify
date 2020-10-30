@@ -67,22 +67,28 @@
           <main class="pl-5 pr-5">
             <!-- =========== Header Navigation ========= -->
             <div class="container">
-              <nav id="navbar mt-4">
-                <ul class="mb-0 p-0 d-flex justify-content-center pt-4">
-                  <li><a type="button" class="navlink mr-5" onclick="page('trending', 'blue')" href="#" id="defaultopen"
-                      aria-current="current">trending</a></li>
-                  <li><a type="button" class="navlink mr-5" onclick="page('podcast', 'green')" href="#">
-                      podcast</a></li>
-                  <li><a type="button" class="navlink mr-5" onclick="page('genres', 'red')" href="#">moods
-                      and genres</a>
-                  </li>
-                  <li><a type="button" class="navlink mr-5" onclick="page('releases', 'violet')" href="#">new
-                      releases</a>
-                  </li>
-                  <li><a type="button" class="navlink mr-5" onclick="page('discover', 'orange')" href="#">discover</a>
-                  </li>
+              <nav id="navbar" class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontent"
+                  aria-controls="#navcontent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"> <i class="fa fa-bars text-white" aria-hidden="true"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcontent">
+                  <ul class="mb-0 p-0 d-flex justify-content-center pt-4">
+                    <li><a type="button" class="navlink mr-5" onclick="page('trending', 'blue')" href="#"
+                        id="defaultopen" aria-current="current">trending</a></li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('podcast', 'green')" href="#">
+                        podcast</a></li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('genres', 'red')" href="#">moods
+                        and genres</a>
+                    </li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('releases', 'violet')" href="#">new
+                        releases</a>
+                    </li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('discover', 'orange')" href="#">discover</a>
+                    </li>
 
-                </ul>
+                  </ul>
+                </div>
               </nav>
             </div>
             <!--------===================TRENDING=================-------->
