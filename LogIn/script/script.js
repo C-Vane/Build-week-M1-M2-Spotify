@@ -35,7 +35,6 @@ const user = ["vanebrunocattabiani@gmail.com"];
 const given_password = ["strive123"];
 user.push(localStorage.getItem("email"));
 given_password.push(localStorage.getItem("password"));
-console.log(user, given_password);
 
 const matchEmail = () => {
   const email = document.getElementById("email");
