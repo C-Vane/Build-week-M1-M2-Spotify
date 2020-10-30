@@ -10,8 +10,8 @@ const headers = {
   Accept: ' application / json',
 };
 
-const fetchMusic = (query, cb) => {
-  let url = `${endPoint}/me/playlists`;
+const fetchMusic = (query, endp, cb) => {
+  let url = `${endPoint}${endp}`;
   if (query !== null) {
     const unifiedQuery = query.replace(' ', '%20');
     console.log();
@@ -26,6 +26,7 @@ const fetchMusic = (query, cb) => {
     .then((data) => {
       cb(data);
     })
+
     .catch((err) => console.log(err));
 };
 
