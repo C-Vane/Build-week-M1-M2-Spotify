@@ -148,3 +148,13 @@ input[type="email"]:focus {
   border-color: #4a6aaf;
   box-shadow: none;
 }
+/***********header nav**********************/
+
+.navbar-toggler {
+  padding: 0.25rem;
+}
+@media (max-width: 750px) {
+  #navcontent ul {
+    flex-direction: column !important;
+  }
+}

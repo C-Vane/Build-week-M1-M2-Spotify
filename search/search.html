@@ -1,139 +1,211 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <title>Browes</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--FontAwesome-->
-  <script src="https://kit.fontawesome.com/c8c5d377fb.js" crossorigin="anonymous"></script>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!--Artist CSS-->
+  <head>
+    <title>Browes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/c8c5d377fb.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Artist CSS-->
 
-  <link rel="stylesheet" href="/Home/style/home2.css">
-  <link rel="stylesheet" href="/search/style/style.css">
-
-
-
-  <!--Link nav-->
-  <link rel="stylesheet" href="/buttons.css">
-  <link rel="stylesheet" href="/navbar/style.css">
-  <!---FONT CIRCULAR-->
-  <link href="//db.onlinewebfonts.com/c/02d8f1743ede250c7c9865f1574d7cc6?family=Circular+Book" rel="stylesheet"
-    type="text/css" />
-</head>
+    <link rel="stylesheet" href="/Home/style/home2.css">
+    <link rel="stylesheet" href="/search/style/style.css">
 
 
 
-<body>
+    <!--Link nav-->
+    <link rel="stylesheet" href="/buttons.css">
+    <link rel="stylesheet" href="/navbar/style.css">
+    <!---FONT CIRCULAR-->
+    <link href="//db.onlinewebfonts.com/c/02d8f1743ede250c7c9865f1574d7cc6?family=Circular+Book" rel="stylesheet"
+      type="text/css" />
+  </head>
 
-  <div class="container-fluid mb-5 pb-5">
 
-    <!-----=================SIDE NAVBAR================----->
-    <div class="row">
-      <div id="sidebar">
-        <ul class="nav flex-wrap flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <img src="../logo/spotifylogo.png" style="height: 40px; width: auto" alt="" />
-            </a>
-          </li>
-          <li class="nav-item d-flex justify-content-left form-inline mt-3 ml-4">
-            <a class="nav-link" href="/Home/Home2.html"> <i class="fa fa-home mr-2"></i> Home</a>
-          </li>
-          <li class="nav-item d-flex justify-content-left form-inline ml-4">
-            <a class="nav-link" href="/search/search.html"><i class="fa fa-search mr-2"></i>Search</a>
-          </li>
-          <li class="nav-item d-flex justify-content-left form-inline ml-4">
-            <a class="nav-link" href="/Artists/Artist.html">
-              <i class="fa fa-book mr-2"></i>Your Library</a>
-          </li>
-          <li class="nav-item d-flex justify-content-left form-inline" id="smallItems">
-            <a class="nav-link" href="#"><i class="fa fa-arrow-circle-down mr-2"></i><small>Install
-                App</small></a>
-          </li>
-          <li class="nav-item d-flex justify-content-left form-inline" id="smallItems2">
-            <a class="nav-link" href="#"><i class="fa fa-user mr-2"></i><small>User Name</small></a>
-          </li>
-        </ul>
+
+  <body>
+
+    <div class="container-fluid mb-5 pb-5">
+
+      <!-----=================SIDE NAVBAR================----->
+      <div class="row">
+        <div id="sidebar">
+          <ul class="nav flex-wrap flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <img src="../logo/spotifylogo.png" style="height: 40px; width: auto" alt="" />
+              </a>
+            </li>
+            <li class="nav-item d-flex justify-content-left form-inline mt-3 ml-4">
+              <a class="nav-link" href="/Home/Home2.html"> <i class="fa fa-home mr-2"></i> Home</a>
+            </li>
+            <li class="nav-item d-flex justify-content-left form-inline ml-4">
+              <a class="nav-link" href="/search/search.html"><i class="fa fa-search mr-2"></i>Search</a>
+            </li>
+            <li class="nav-item d-flex justify-content-left form-inline ml-4">
+              <a class="nav-link" href="/Artists/Artist.html">
+                <i class="fa fa-book mr-2"></i>Your Library</a>
+            </li>
+            <li class="nav-item d-flex justify-content-left form-inline" id="smallItems">
+              <a class="nav-link" href="#"><i class="fa fa-arrow-circle-down mr-2"></i><small>Install
+                  App</small></a>
+            </li>
+            <li class="nav-item d-flex justify-content-left form-inline" id="smallItems2">
+              <a class="nav-link" href="#"><i class="fa fa-user mr-2"></i><small>User Name</small></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- ======= MAIN PAGE============-->
+        <div class="col p-0" id="content">
+          <main class="pl-5 pr-5">
+            <!-- =========== Header Navigation ========= -->
+            <div class="container">
+              <input type="search" name="browse" id="topsearch" placeholder="Search" />
+              <h1>Browse</h1>
+
+              <nav id="navbar" class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontent"
+                  aria-controls="#navcontent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"> <i class="fa fa-bars text-white" aria-hidden="true"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcontent">
+                  <ul class="mb-0 p-0 d-flex justify-content-center pt-4">
+                    <li><a type="button" class="navlink mr-5" onclick="page('genres', 'color')" href="#"
+                        id="defaultopen" aria-current="current">genres & moods</a></li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('podcast', 'color')" href="#">
+                        podcast</a></li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('charts', 'color')" href="#">charts</a>
+                    </li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('releases', 'color')" href="#">new
+                        releases</a>
+                    </li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('discover', 'color')" href="#">discover</a>
+                    </li>
+                    <li><a type="button" class="navlink mr-5" onclick="page('concerts', 'color')" href="#">concerts</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <!---=================GENRES=================-------->
+
+            <section class="container p-2 ml-4" id="genres">
+              <h2>Genres & Moods</h2>
+
+              <div class="row mr-4 search__result">
+                <div class="d-flex justify-content-center">
+                  <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+
+            <section class="container p-2 ml-4" id="podcast">
+
+            </section>
+            <section class="container p-2 ml-4" id="charts">
+
+            </section>
+            <section class="container p-2 ml-4" id="new releases">
+
+            </section>
+            <section class="container p-2 ml-4" id="discover">
+
+            </section>
+            <section class="container p-2 ml-4" id="concerts">
+
+            </section>
+
+          </main>
+        </div>
       </div>
+      <footer class="page-footer font-small">
+        <div class="container-fluid">
+          <div class="player gradient">
+            <div class="row">
+              <div class="col d-flex justify-content-left form-inline">
+                <img class="song-info-cover" style="width: 70px; padding-bottom: 5px; padding-top: 5px"
+                  src="../logo/queen.jpg" alt="" />
+                <div class="song-info-text" style="font-size: 10pt; color: white; margin-left: 7px">
+                  <div class="song-info-title">Procession</div>
+                  <div class="song-info-title"><small>Queen</small></div>
+                </div>
+              </div>
 
+              <div class="col d-flex justify-content-center form-inline" id="playerButtons">
+                <a class="button gradient" id="random" href="" title="">
+                  <i class="fa fa-random"></i>
+                </a>
+                <a class="button gradient" id="backward" href="" title="" style="margin-left: 30px">
+                  <i class="fa fa-step-backward"></i>
+                </a>
+                <a class="button gradient" id="play" href="" title="" style="margin-left: 30px">
+                  <i class="fa fa-play-circle fa-2x"></i>
+                </a>
+                <a class="button gradient" id="forward" href="" title="" style="margin-left: 30px">
+                  <i class="fa fa-step-forward"></i>
+                </a>
+                <a class="button gradient" id="repeat" href="" title="" style="margin-left: 30px">
+                  <i class="fa fa-repeat"></i>
+                </a>
 
-      <!-- ======= MAIN PAGE============-->
-      <div class="col p-0" id="content">
-        <main class="pl-5 pr-5">
-          <!-- =========== Header Navigation ========= -->
-          <div class="container">
-            <input type="search" name="browse" id="topsearch" placeholder="Search" />
-            <h1>Browse</h1>
-            <nav id="navbar mt-4">
-              <ul class="mb-0 p-0 d-flex justify-content-center pt-4">
-                <li><a type="button" class="navlink mr-5" onclick="page('genres', 'blue')" href="#" id="defaultopen"
-                    aria-current="current">genres & moods</a></li>
-                <li><a type="button" class="navlink mr-5" onclick="page('podcast', 'green')" href="#">
-                    podcast</a></li>
-                <li><a type="button" class="navlink mr-5" onclick="page('charts', 'red')" href="#">charts</a>
-                </li>
-                <li><a type="button" class="navlink mr-5" onclick="page('releases', 'red')" href="#">new
-                    releases</a>
-                </li>
-                <li><a type="button" class="navlink mr-5" onclick="page('discover', 'red')" href="#">discover</a>
-                </li>
-                <li><a type="button" class="navlink mr-5" onclick="page('concerts', 'red')" href="#">concerts</a>
-                </li>
+                <div class="progress-container w-100">
+                  <div class="progress-time" id="current-time"></div>
+                  <input type="range" value="0" id="progress" class="progress-range" />
+                  <div class="progress-time" id="duration"></div>
+                </div>
+              </div>
 
-              </ul>
-            </nav>
-          </div>
-          <!---=================GENRES=================-------->
-
-          <section class="container p-2 ml-4" id="genres">
-            <h2>Genres & Moods</h2>
-
-            <div class="row mr-4 search__result">
-              <div class="d-flex justify-content-center">
-                <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-                  <span class="sr-only">Loading...</span>
+              <div class="col v-controls-wrapper">
+                <div class="float-right volume-controls">
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-laptop ml-3"></i>
+                  <i class="fa fa-volume-up mx-3"></i>
+                  <input type="range" id="seek" value="0" max="" />
+                </div>
+              </div>
+              <div class="d-sm-block d-md-none">
+                <div class="d-flex justify-content-center">
+                  <a class="nav-link" href="/Home/Home.html">
+                    <i class="fa fa-home mr-2"></i> Home</a>
+                  <a class="nav-link" href="/search/search.html"><i class="fa fa-search mr-2"></i>Search</a>
+                  <a class="nav-link" href="/Artists/Artist.html">
+                    <i class="fa fa-book mr-2"></i>Your Library</a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </footer>
 
-          </section>
-
-
-
-
-        </main>
-      </div>
     </div>
-    <footer class="page-footer font-small blue fixed-bottom">
-      <!-- Copyright -->
-      <div class="footer player">
-        <iframe src="https://open.spotify.com/embed/track/2AxCeJ6PSsBYiTckM0HLY7" width="100%" frameborder="0"
-          allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-      <!-- Copyright -->
-    </footer>
-  </div>
 
 
-  <script src="../asset/js/search.js" type="module"></script>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="/Artists/script/artist.js"></script>
+    <script src="../asset/js/search.js" type="module"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="/asset/js/topnavbar.js"></script>
 
-</body>
+  </body>
 
 </html>

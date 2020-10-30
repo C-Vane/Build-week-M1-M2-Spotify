@@ -102,6 +102,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: min-content;
 }
 #playerButtons {
   margin-top: 10px;
@@ -207,7 +208,7 @@ input[type="range"]::-ms-thumb {
 input[type="range"]:focus::-ms-fill-lower {
   background: #1ed760;
 }
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   #imageContainer {
     padding-bottom: 50px;
   }
@@ -222,6 +223,14 @@ input[type="range"]:focus::-ms-fill-lower {
   footer .row img,
   .v-controls-wrapper {
     display: none;
+  }
+  h1,
+  h2 {
+    font-size: medium;
+  }
+  h4,
+  h5 {
+    font-size: small;
   }
 }
 

@@ -1,15 +1,11 @@
 #content {
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(66, 66, 66),
-    rgb(34, 34, 34)
-  );
+  background-image: linear-gradient(to right bottom, rgb(82, 80, 80), rgb(34, 34, 34));
   min-height: fit-content;
   /* max-height: fit-content; */
   /* padding-bottom: 50px; */
   /* margin-left: 180px; */
 }
-input[type='search'] {
+input[type="search"] {
   border: none;
   padding-left: 20px;
   border-radius: 50px;
