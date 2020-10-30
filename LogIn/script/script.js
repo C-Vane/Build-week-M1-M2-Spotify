@@ -35,11 +35,11 @@ const user = ["vanebrunocattabiani@gmail.com"];
 const given_password = ["strive123"];
 user.push(localStorage.getItem("email"));
 given_password.push(localStorage.getItem("password"));
+console.log(user, given_password);
 
 const matchEmail = () => {
   const email = document.getElementById("email");
   const email_confirm = document.getElementById("email2");
-  console.log(email_confirm.value);
 
   if (email.value !== email_confirm.value) {
     email_confirm.classList.add("haserrorborder");

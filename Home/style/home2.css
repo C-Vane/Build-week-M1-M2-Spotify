@@ -51,6 +51,7 @@ h1 {
   padding-bottom: 50px;
   margin-left: 180px;
   height: 100%;
+  min-height: 100vh;
 }
 .blue {
   background-color: #95c0de;

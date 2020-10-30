@@ -1,7 +1,3 @@
-const find = (query) => {
-  return document.querySelector(query);
-};
-
 const page = (section, color) => {
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("page");
