@@ -29,7 +29,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col col-lg-2">
+        <div class="col d-sm-none d-md-block col-md-2 col-lg-2">
           <ul
             class="nav d-flex flex-column justify-content-left"
             id="navbarColumn"
@@ -79,7 +79,7 @@
             </li>
           </ul>
         </div>
-        <div class="col col-lg-10">
+        <div class="col col-sm-12 col-md-10 col-lg-10">
           <div class="container" id="firstContainer">
             <div class="row">
               <div
@@ -381,6 +381,19 @@
                 <i class="fa fa-volume-up mx-3"></i>
                 <input type="range" id="seek" value="0" max="" />
               </div>
+            </div>
+          </div>
+          <div class="d-sm-block d-md-none">
+            <div class="d-flex justify-content-center">
+              <a class="nav-link" href="#">
+                <i class="fa fa-home mr-2"></i> Home</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa fa-search mr-2"></i>Search</a
+              >
+              <a class="nav-link" href="#">
+                <i class="fa fa-book mr-2"></i>Your Library</a
+              >
             </div>
           </div>
         </div>
