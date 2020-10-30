@@ -13,6 +13,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Artist CSS-->
     <link rel="stylesheet" href="/Artists/style/artist.css">
+    <link rel="icon" type="image/png" href="/asset/favicon (1).ico" />
 
 
     <!--Link nav-->
@@ -66,7 +67,7 @@
               <small>33,000,575 monthly listners</small>
               <h1 class="m-5">Queen</h1>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center" id="main-buttons">
               <button class="btn btn-success">play</button>
               <button class="btn btn-outline-light"> follow</button>
               <div class="dropdown open">
@@ -105,16 +106,22 @@
             </div>
 
             <!-- =========== Header Navigation ========== -->
-            <nav id="navbar">
-              <ul class="header navbar mt-5 d-flex justify-content-center">
-                <li><a type="button" class="navlink mr-5" onclick="page('overview', 'blue')" href="#" id="defaultopen"
-                    aria-current="current">overview</a></li>
-                <li><a type="button" class="navlink mr-5" onclick="page('relatedartist', 'green')" href="#">
-                    related
-                    artists</a></li>
-                <li><a type="button" class="navlink mr-5" onclick="page('about', 'red')" href="#">about</a></li>
+            <nav id="navbar" class="navbar navbar-expand-md">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcontent"
+                aria-controls="#navcontent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> <i class="fa fa-bars text-white" aria-hidden="true"></i></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-around" id="navcontent">
+                <ul class="header navbar mt-5 d-flex justify-content-center">
+                  <li><a type="button" class="navlink mr-5" onclick="page('overview', 'blue')" href="#" id="defaultopen"
+                      aria-current="current">overview</a></li>
+                  <li><a type="button" class="navlink mr-5" onclick="page('relatedartist', 'green')" href="#">
+                      related
+                      artists</a></li>
+                  <li><a type="button" class="navlink mr-5" onclick="page('about', 'red')" href="#">about</a></li>
 
-              </ul>
+                </ul>
+              </div>
             </nav>
 
           </header>
@@ -332,6 +339,15 @@
                     <i class="fa fa-laptop ml-3"></i>
                     <i class="fa fa-volume-up mx-3"></i>
                     <input type="range" id="seek" value="0" max="" />
+                  </div>
+                </div>
+                <div class="d-sm-block d-md-none">
+                  <div class="d-flex justify-content-center">
+                    <a class="nav-link" href="/Home/Home.html">
+                      <i class="fa fa-home mr-2"></i> Home</a>
+                    <a class="nav-link" href="/search/search.html"><i class="fa fa-search mr-2"></i>Search</a>
+                    <a class="nav-link" href="/Artists/Artist.html">
+                      <i class="fa fa-book mr-2"></i>Your Library</a>
                   </div>
                 </div>
               </div>

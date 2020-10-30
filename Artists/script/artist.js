@@ -29,7 +29,7 @@ const setAlbum = (endpoint) => {
     //     let card = data.items.reduce((acc, el, index) => {
     //       console(el);
     //       return index > min && index < max
-    //         ? (acc += `  <div class="col-6 col-md-5 col-lg-3 mb-1">
+    //         ? (acc += `  <div class="col-6 col-md-5 col-lg-3">
     //         <img src="${min}" onclick="toAlbum()" alt="album picture"
     //             class="albumcover mb-1">
     //         <div class="playbtns d-flex flex-row justify-content-around">
@@ -57,15 +57,15 @@ const popularSection = document.querySelector(".popular__container");
 const setPoularAlbom = () => {
   fetchMusic(null, "/artists/1dfeR4HaWDbWqFHLkxsg1d/albums", ({ items }) => {
     if (items) {
-      let card = items.reduce((acc, { images, name, release_data, total_tracks }, index) => {
+      let card = items.reduce((acc, { images, name, release_date, total_tracks }, index) => {
         return index <= 10 && index != 0
           ? (acc += `<div onclick="location.href='/Album/Album.html'" class="row">
           <div class="col-1">${index}</div>
           <div class="col-2"><img src="${images[0].url}" height="40px" width="40px" alt="" srcset="">
           </div>
           <div class="col-6">${name} -  Mix</div>
-          <div class="col-2">${release_data}</div>
-          <div class="col-1">${total_tracks}</div>
+          <div id="dates" class="col-2">${release_date}</div>
+          <div id="tracknum" class="col-1">${total_tracks}</div>
         </div>`)
           : acc;
       }, " ");
@@ -79,7 +79,7 @@ const setPoularAlbom = () => {
 const renderCard = (sec, arr) => {
   let card = arr.reduce((acc, { images, name, external_urls }, index) => {
     return index <= 3
-      ? (acc += `<div class="col-6 col-md-5 col-lg-3 mb-1">
+      ? (acc += `<div class="col-6 col-md-5 col-lg-3 mb-5">
         <img src="${images[0].url}" height="100%" onclick="location.href='/Album/Album.html'" alt="album picture"
           class="albumcover mb-1">
         <div class="playbtns d-flex flex-row justify-content-around">
