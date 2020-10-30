@@ -25,7 +25,6 @@ const fetchMusic = (query, endp, cb) => {
     .then((data) => {
       cb(data);
     })
-
     .catch((err) => console.log(err));
 };
 
