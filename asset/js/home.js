@@ -59,7 +59,7 @@ fetchMusic(null, "/me/following", (data) => {
   console.log(data);
   let card = data.items.reduce((acc, el, index) => {
     console.log("index");
-    return index < 5
+    return index < 10
       ? (acc += `<div class="col col-sm-12 col-md-4 col-lg-2 p-0">
     <div class="composition m-1">
       <div class="image">

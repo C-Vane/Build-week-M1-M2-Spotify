@@ -5,7 +5,7 @@ const endPoint = `https://api.spotify.com/v1`;
 // If Token expired please get new one from https://developer.spotify.com/console/get-current-user-playlists/
 const headers = {
   Authorization:
-    'Bearer BQAXziBo29pvfCI1OPomeycRVNJ7YBxKFP42N5jVCVudB1rYxJJpG35BS3A0UiAjWPteOt04tG2gUad6JpO1iU_UkL4Z1cavQ65Py6qeGprQDmtdnY0TFZd0x8KzmdR0Id6ViIAU4HcivIZfJhGl_Y1dYoDlL79LDUltKmRVfVnn',
+    'Bearer BQAJsbutEYQAvySXtFQU7BiyeZU_dfz6VJSjCEuz0SAc4e2HgvdYTgHyW2pMYOuDgEbrfbF4vf-VE_11pI2nuijVvBb7MyfnN2K9DrP7SMyDZMNhsUikeskDePXgtYM_yPDE7xz6K4DPKA9fWFb1XhIvMxWQsNuWEYyWyOhHt-95',
   'Content-Type': 'application/x-www-form-urlencoded',
   Accept: ' application / json',
 };
@@ -14,8 +14,7 @@ const fetchMusic = (query, endp, cb) => {
   let url = `${endPoint}${endp}`;
   if (query !== null) {
     const unifiedQuery = query.replace(' ', '%20');
-    console.log();
-    url = `${endPoint}/search?query=${query}&type=track&offset=0&limit=20`;
+    url = `${endPoint}${endp}${query}&type=track&offset=0&limit=20`;
   }
 
   fetch(url, {
