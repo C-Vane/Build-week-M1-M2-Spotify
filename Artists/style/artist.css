@@ -267,10 +267,7 @@ main label {
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
 }
-#overview .playbtns .btn-success {
-  bottom: 5%;
-  left: 65%;
-}
+
 @keyframes btnopacity {
   from {
     bottom: -40px;
