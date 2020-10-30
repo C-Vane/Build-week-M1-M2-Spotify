@@ -180,6 +180,16 @@ header div.container {
 .dropdown:hover .dropdown-menu.one {
   display: block;
 }
+/*=========================TOP NAV BAR=============================*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 /*======================= CONTENT =======================*/
 /*========================= MUSIC LIST =========================*/
 

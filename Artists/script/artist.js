@@ -1,10 +1,9 @@
-
 import fetchMusic from "/asset/index.js";
 const find = (query) => {
   return document.querySelector(query);
 };
 
-/*window.onscroll = function () {
+window.onscroll = function () {
   myFunction();
 };
 
@@ -18,8 +17,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-*/
-
 
 const page = (section, color) => {
   let i, tabcontent;
@@ -56,19 +53,20 @@ const toAlbum = () => {
 //POPULATE MUSIC AND ALBUM
 const page_number = [find("#popular"), find("#artistpick"), find("#popular"), find("#featuring"), find("#related"), find("#about")];
 const setAlbum = (endpoint) => {
-  let min=0, max=5;
+  let min = 0,
+    max = 5;
   fetchMusic(null, endpoint, (data) => {
     for (let i = 1; i < 4; i++) {
       let card = data.items.reduce((acc, el, index) => {
         console(el);
         return index > min && index < max
           ? (acc += `  <div class="col-6 col-md-5 col-lg-3 mb-1">
-          <img src="${}" onclick="toAlbum()" alt="album picture"
+          <img src="${min}" onclick="toAlbum()" alt="album picture"
               class="albumcover mb-1">
           <div class="playbtns d-flex flex-row justify-content-around">
-              <button class="btn btn-success"><a href="${}" class="fa fa-play text-decoration-none text-white"></a></button>
+              <button class="btn btn-success"><a href="${max}" class="fa fa-play text-decoration-none text-white"></a></button>
           </div>
-          <label>${}</label>
+          <label>${index}</label>
           <small class="text-muted">Qween</small>
       </div> `)
           : acc;
