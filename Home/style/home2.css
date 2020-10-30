@@ -48,10 +48,11 @@ h1 {
   }
 }
 #content {
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   margin-left: 180px;
   height: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
+  max-width: 100%;
 }
 .blue {
   background-color: #95c0de;
