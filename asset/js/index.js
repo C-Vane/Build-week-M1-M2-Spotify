@@ -5,7 +5,7 @@ const endPoint = `https://api.spotify.com/v1`;
 // If Token expired please get new one from https://developer.spotify.com/console/get-current-user-playlists/
 const headers = {
   Authorization:
-    "Bearer BQAtiGVMWQRJHt5ZX-WECuOxqHRctkapgmf0acqARdqD6XOtDzW5uJl52xnHadDtL7Zl4IQma42KK6omHKu-O7HSE1Qn3Wzc_UFkhp_2XKCj6AKa4vmE206P8bWcqXJQLLB9BR-kB-2rraI4cBaTrkZb0XHEMb9G3ddgtcx_8rtlgjuedeOTdGEdh-drJkthYAKka20f9UlllvxDHF32pVusohM",
+    "Bearer BQDJH_vxR-yzFd3P6_kwQv4jzXsGO-akOFMNHpS21KZv-7sclRCmSx-xbM13pJ4utcftLrDxb1WkyzeJOMkUXal7pv4U5358eBucdzN7lDUYpi3JtqQi9r3Go8BTjxEvVnrd-td99LVstnTtdvNja1jkWAzpySqs6TTElD-eenfrAVhrvsWRMo2koKntV281nWog-k63ZW64Lb_sbX0We6Wa3yI",
   "Content-Type": "application/x-www-form-urlencoded",
   Accept: " application / json",
 };

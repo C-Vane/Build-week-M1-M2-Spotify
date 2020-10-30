@@ -29,14 +29,14 @@
               </a>
             </li>
             <li class="nav-item d-flex justify-content-left form-inline mt-3 ml-4">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/Home/Home2.html">
                 <i class="fa fa-home mr-2"></i> Home</a>
             </li>
             <li class="nav-item d-flex justify-content-left form-inline ml-4">
-              <a class="nav-link" href="#"><i class="fa fa-search mr-2"></i>Search</a>
+              <a class="nav-link" href="/search/search.html"><i class="fa fa-search mr-2"></i>Search</a>
             </li>
             <li class="nav-item d-flex justify-content-left form-inline ml-4">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/Artists/Artist.html">
                 <i class="fa fa-book mr-2"></i>Your Library</a>
             </li>
             <li class="nav-item d-flex justify-content-left form-inline" id="smallItems">
@@ -265,7 +265,6 @@
     </div>
 
     <!-- Footer -->
-
     <footer class="page-footer font-small">
       <div class="container-fluid">
         <div class="player gradient">
@@ -286,9 +285,9 @@
               <a class="button gradient" id="backward" href="" title="" style="margin-left: 30px">
                 <i class="fa fa-step-backward"></i>
               </a>
-              <a class="button gradient" id="play" href="" title="" style="margin-left: 30px">
+              <button onclick="playAudio()" type="button" id="play" href="" title="" style="margin-left: 30px">
                 <i class="fa fa-play-circle fa-2x"></i>
-              </a>
+              </button>
               <a class="button gradient" id="forward" href="" title="" style="margin-left: 30px">
                 <i class="fa fa-step-forward"></i>
               </a>
@@ -298,7 +297,7 @@
 
               <div class="progress-container w-100">
                 <div class="progress-time" id="current-time"></div>
-                <input type="range" id="progress" class="progress-range" />
+                <input type="range" id="progress" value="0" class="progress-range" />
                 <div class="progress-time" id="duration"></div>
               </div>
             </div>
@@ -308,7 +307,8 @@
                 <i class="fa fa-tasks"></i>
                 <i class="fa fa-laptop ml-3"></i>
                 <i class="fa fa-volume-up mx-3"></i>
-                <input type="range" id="seek" value="0" max="10" />
+                <input type="range" id="seek" value="0" min="0" max="1" step="0.01"
+                  onchange="changevolume(this.value)" />
               </div>
             </div>
           </div>
@@ -323,8 +323,13 @@
           </div>
         </div>
       </div>
-    </footer>
+      <audio id="myAudio">
+        <source src="/queenProcession.mp3" type="audio/mpeg">
+      </audio>
 
+      <script src="/player.js"></script>
+
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
