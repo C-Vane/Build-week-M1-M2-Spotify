@@ -51,3 +51,12 @@ $("#topsearch").keyup(function () {
 });
 
 $(document).ready(searchMusic("Every Body Knows"));
+
+/* 
+const arr = ["podcast","charts","new releases","discover","concerts"];
+
+const addToPages=() => {
+ arr.forEach(element => {
+   searchMusic(element);
+ });
+} */
