@@ -1,4 +1,4 @@
-import fetchMusic from '/asset/js/index.js';
+import fetchMusic from "/asset/js/index.js";
 const find = (query) => {
   return document.querySelector(query);
 };
@@ -18,49 +18,8 @@ const find = (query) => {
 //   }
 // }
 
-const page = (section, color) => {
-  let i, tabcontent;
-  tabcontent = document.getElementsByClassName('page');
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none';
-    document
-      .getElementById('content')
-      .classList.remove('orange', 'red', 'blue', 'green', 'violet');
-  }
-
-  document.getElementById(section).style.display = 'block';
-  document.getElementById('content').classList.add(color);
-};
-
-document.getElementById('defaultopen').click();
-let count = true;
-const changetext = (elem) => {
-  if (count) {
-    elem.innerText = 'SHOW LESS';
-    count = false;
-  } else {
-    elem.innerText = 'SEE MORE';
-    count = true;
-  }
-};
-
-const playMusic = () => {
-  window.open('/Album/Album.html');
-};
-
-const toAlbum = () => {
-  window.open('/Album/Album.html');
-};
-
 //POPULATE MUSIC AND ALBUM
-const page_number = [
-  find('#popular'),
-  find('#artistpick'),
-  find('#popular'),
-  find('#featuring'),
-  find('#related'),
-  find('#about'),
-];
+const page_number = [find("#popular"), find("#artistpick"), find("#popular"), find("#featuring"), find("#related"), find("#about")];
 const setAlbum = (endpoint) => {
   let min = 0,
     max = 5;
@@ -94,14 +53,13 @@ const setAlbum = (endpoint) => {
 };
 
 // setAlbum('/artists/1dfeR4HaWDbWqFHLkxsg1d/albums');
-const popularSection = document.querySelector('.popular__container');
+const popularSection = document.querySelector(".popular__container");
 const setPoularAlbom = () => {
-  fetchMusic(null, '/artists/1dfeR4HaWDbWqFHLkxsg1d/albums', ({ items }) => {
+  fetchMusic(null, "/artists/1dfeR4HaWDbWqFHLkxsg1d/albums", ({ items }) => {
     if (items) {
-      let card = items.reduce(
-        (acc, { images, name, release_data, total_tracks }, index) => {
-          return index <= 10 && index != 0
-            ? (acc += `<div onclick="location.href='/Album/Album.html'" class="row">
+      let card = items.reduce((acc, { images, name, release_data, total_tracks }, index) => {
+        return index <= 10 && index != 0
+          ? (acc += `<div onclick="location.href='/Album/Album.html'" class="row">
           <div class="col-1">${index}</div>
           <div class="col-2"><img src="${images[0].url}" height="40px" width="40px" alt="" srcset="">
           </div>
@@ -109,13 +67,11 @@ const setPoularAlbom = () => {
           <div class="col-2">${release_data}</div>
           <div class="col-1">${total_tracks}</div>
         </div>`)
-            : acc;
-        },
-        ' '
-      );
+          : acc;
+      }, " ");
       popularSection.innerHTML = card;
     } else {
-      alert('Connection to Failed');
+      alert("Connection to Failed");
     }
   });
 };
@@ -133,26 +89,23 @@ const renderCard = (sec, arr) => {
         <small class="text-muted">Qween</small>
       </div>`)
       : acc;
-  }, ' ');
+  }, " ");
   sec.innerHTML = card;
 };
 
-const artistpickSection = document.querySelector('#artistpick');
-const releasesContainer = document.querySelector('.releases__container');
-const featureContainer = document.querySelector('.feature__container');
+const artistpickSection = document.querySelector("#artistpick");
+const releasesContainer = document.querySelector(".releases__container");
+const featureContainer = document.querySelector(".feature__container");
 const setArtist = () => {
-  fetchMusic(
-    null,
-    '/artists/4tZwfgrHOc3mvqYlEYSvVi/related-artists',
-    ({ artists }) => {
-      if (artists) {
-        renderCard(artistpickSection, artists.slice(0, 4));
-        renderCard(releasesContainer, artists.slice(4, 8));
-        renderCard(featureContainer, artists.slice(8, 12));
+  fetchMusic(null, "/artists/4tZwfgrHOc3mvqYlEYSvVi/related-artists", ({ artists }) => {
+    if (artists) {
+      renderCard(artistpickSection, artists.slice(0, 4));
+      renderCard(releasesContainer, artists.slice(4, 8));
+      renderCard(featureContainer, artists.slice(8, 12));
 
-        let card = artists.reduce((acc, { images }, index) => {
-          return index <= 12
-            ? (acc += `<div class="col-6 col-md-5 col-lg-4 my-2">
+      let card = artists.reduce((acc, { images }, index) => {
+        return index <= 12
+          ? (acc += `<div class="col-6 col-md-5 col-lg-4 my-2">
             <img src="${images[0].url}" height="100%" alt="album picture" class="albumcover mb-1">
             <div class="playbtns d-flex flex-row justify-content-between">
               <button class="btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
@@ -160,14 +113,13 @@ const setArtist = () => {
               <button class="btn">...</button>
             </div>
           </div>`)
-            : acc;
-        }, ' ');
-        document.querySelector('.related__artists').innerHTML = card;
-      } else {
-        alert('Connection to Failed');
-      }
+          : acc;
+      }, " ");
+      document.querySelector(".related__artists").innerHTML = card;
+    } else {
+      alert("Connection to Failed");
     }
-  );
+  });
 };
 
 setPoularAlbom();
