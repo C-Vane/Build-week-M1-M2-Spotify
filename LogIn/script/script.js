@@ -16,16 +16,25 @@ const IsThisAnEmail = (S) => {
   }
   return false;
 };
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const emaildiv = email.parentNode;
+
 const validateEmail = () => {
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  const emaildiv = email.parentNode;
   if (!IsThisAnEmail(email.value)) {
     email.classList.add("haserrorborder");
     emaildiv.classList.add("haserror");
+    return false;
   } else {
+    email.classList.remove("haserrorborder");
+    emaildiv.classList.remove("haserror");
+    return true;
   }
 };
+const user = ["vanebrunocattabiani@gmail.com"];
+const given_password = ["strive123"];
+user.push(localStorage.getItem("email"));
+given_password.push(localStorage.getItem("password"));
 
 const matchEmail = () => {
   const email = document.getElementById("email");
@@ -40,7 +49,26 @@ const matchEmail = () => {
     email_confirm.parentElement.classList.remove("notthesame");
   }
 };
+const checkEmail = () => {
+  for (i = 0; i < user.length; i++) {
+    console.log(given_password[i], password.value);
+    if (email.value === user[i] && given_password[i] === password.value) return true;
+    else return false;
+  }
+};
+
 const logIn = () => {
+  console.log(validateEmail(), checkEmail());
+  if (validateEmail() && checkEmail()) {
+    window.open("../Home/Home2.html");
+  } else {
+    email.classList.add("haserrorborder");
+    password.classList.add("haserrorborder");
+    emaildiv.classList.add("haserror");
+  }
+};
+
+const signIn = () => {
   const inputs = document.querySelectorAll("[required]");
   let i = 0;
   inputs.forEach((element) => {
@@ -49,11 +77,14 @@ const logIn = () => {
     }
   });
   if (i === 0) {
+    user.push(email.value);
+    localStorage.setItem("password", password.value);
+    localStorage.setItem("email", email.value);
     window.open("../Home/Home2.html");
-  } else return;
-}; ///
+  } else return alert("Fill in the form");
+};
 
-/****GOOGLE LOG IN*/
+/****GOOGLE LOG IN
 let googleUser = {};
 let startApp = function () {
   gapi.load("auth2", function () {
@@ -89,4 +120,4 @@ function onSignIn(googleUser) {
   console.log("Name: " + profile.getName());
   console.log("Image URL: " + profile.getImageUrl());
   console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
+} */
