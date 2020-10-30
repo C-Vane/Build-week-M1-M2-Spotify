@@ -49,18 +49,17 @@ const logIn = () => {
     }
   });
   if (i === 0) {
-    window.open("../Home/Home.html");
+    window.open("../Home/Home2.html");
   } else return;
-};
+}; ///
 
-/***GOOGLE LOG IN
-
+/****GOOGLE LOG IN*/
 let googleUser = {};
 let startApp = function () {
   gapi.load("auth2", function () {
     // Retrieve the singleton for the GoogleAuth library and set up the client.
     auth2 = gapi.auth2.init({
-      client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com",
+      client_id: "78495762108-mjj5s44emgdfk1vqupdph0rotrk3vfuc.apps.googleusercontent.com",
       cookiepolicy: "single_host_origin",
       // Request scopes in addition to 'profile' and 'email'
       //scope: 'additional_scope'
@@ -91,4 +90,3 @@ function onSignIn(googleUser) {
   console.log("Image URL: " + profile.getImageUrl());
   console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
-*/

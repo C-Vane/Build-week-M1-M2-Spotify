@@ -44,9 +44,6 @@
 
 /****************ICONS**************/
 .library {
-  background-color: #000;
-
-  font-size: 16px;
   font-weight: 100;
   letter-spacing: 2px;
 }
@@ -55,7 +52,7 @@
   position: relative;
   font-size: 19px;
   margin: 0px;
-  top: 1px;
+  top: 3px;
 }
 /******************CHECK BOX*************/
 
